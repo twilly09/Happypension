@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" sizes="64x64" href="./src/images/icon.svg">
+    <!-- <link rel="stylesheet" type="text/css" href="./src/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="./src/styles/index.css"> -->
+
+    <!-- 초기화 -->
+    <link rel="stylesheet" type="text/css" href="./src/css/reset.css">
+
+    <!-- header, footer 적용 -->
+    <link rel="stylesheet" type="text/css" href="./src/css/common.css">
+
+    <!-- Index css 적용-->
+    <link rel="stylesheet" type="text/css" href="./src/css/index.css">
+
+
+    <!-- 검색엔진 키워드 -->
+    <meta name="keyword" content="펜션">
+    <!-- 웹 페이지에 대한 설명 -->
+    <meta name="description" content="포트폴리오 용도">
+    <!-- 문서의 저자 -->
+    <meta name="author" content="이젠">
+
+    <title>Main Page</title>
+    <script src="./src/plugin/jquery-3.6.0.min.js" defer></script>
+    <script src="./src/plugin/anime.min.js" defer></script>
+
+
+    <script src="./src/scripts/main.js" defer></script>
+</head>
+
+<body>
+    <!-- #region Header  -->
+    <header class="header" slot="header">
+
+        <!-- wrap -->
+        <div class="header__wrap">
+            <!-- flex 박스 컨테이너 -->
+            <div class="header__flexbox">
+                <figure class="header__logo">
+                    <a href="./index.html">
+                        <img src="./src/images/LOGO.png" alt="LOGO">
+                    </a>
+
+                </figure>
+
+                <!-- 메뉴 -->
+                <nav class="header__gnb">
+                    <ul class="gnb">
+                        <li class="gnb__item">
+                            <a href="about.html">
+                                펜션소개
+                            </a>
+                        </li>
+                        <li class="gnb__item">
+                            <a href="#">
+                                객실소개
+                            </a>
+                        </li>
+                        <li class="gnb__item">
+                            <a href="#">
+                                펜션스페셜
+                            </a>
+                        </li>
+                        <li class="gnb__item">
+                            <a href="#">
+                                펜션서비스
+                            </a>
+                        </li>
+                        <li class="gnb__item">
+                            <a href="./travel.html">
+                                주변여행지
+                            </a>
+                        </li>
+                        <li class="gnb__item">
+                            <a href="#">
+                                예약안내
+                            </a>
+                        </li>
+                        <li class="gnb__item">
+                            <a href="./community.html">
+                                커뮤니티
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- ICON -->
+                <ul class="header__icon">
+                    <li class="icon__item">
+                        <a href="#">
+                            <span class="icon-bank"></span>
+                        </a>
+                    </li>
+                    <li class="icon__item">
+                        <a href="about.html#main">
+                            <span class="icon-location2"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- #endregion -->
+
+    <!-- Section-1 -->
+    <section class="section-1" slot="section">
+        <h1 class="section-1__mainTitle">
+            The Happy Pension
+        </h1>
+        <div class="section-1__scroll">
+            <svg xmlns="http://www.w3.org/2000/svg" width="45.783" height="26.178" viewBox="0 0 45.783 26.178"
+                class="section-1__svg">
+                <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down"
+                    d="M29.088,29.532,46.4,12.207a3.258,3.258,0,0,1,4.621,0,3.3,3.3,0,0,1,0,4.635L31.4,36.471a3.266,3.266,0,0,1-4.512.1L7.142,16.856a3.272,3.272,0,0,1,4.621-4.635Z"
+                    transform="translate(-6.188 -11.246)" fill="#fff" />
+            </svg>
+            <p class="section-1__scrollText">
+                scroll
+            </p>
+        </div>
+    </section>
+    <!-- End of Section-1 -->
+
+    <!-- Section-2 -->
+    <section class="section-2">
+        <div class="section-2__wrap">
+            <h2 class="section-2__title">
+                welcome to happy place
+            </h2>
+            <div class="section-2__flexbox">
+                <div class="section-2__template">
+                    <video class="section-2__video" src="./src/video/video.mp4" autoplay
+                        poster="./src/images/img_garden_tablet.jpg" muted controls>Video
+                    </video>
+                </div>
+                <div class="section-2__template">
+                    <p class="section-2__text">
+                        행복펜션
+                    </p>
+                    <h3 class="section-2__subtitle">
+                        watch the video
+                    </h3>
+                    <p class="section-2__text">
+                        친구, 가족, 동료들과 여행하며 쉬기 좋은 공간,
+                        특별한 여행, 특별한 날 소중한 사람들과 잊을 수 없는
+                        추억 만들어보세요.
+                    </p>
+                    <a href="#" class="section-2__button">
+                        예약하러가기
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- End of Section-2 -->
+
+    <!-- Section-3 -->
+    <section class="section-3">
+
+    </section>
+    <!-- End of Section-3 -->
+
+    <!-- Section-4 -->
+    <section class="section-4">
+        <div class="section-4__wrap">
+            <div class="section-4__template">
+                <h2 class="section-4__title">
+                    rooms
+                </h2>
+                <p class="section-4__subtitle">
+                    행복펜션 객실 미리보기
+                </p>
+                <a href="#" class="section-4__button">
+                    view all rooms
+                </a>
+            </div>
+
+            <div class="section-4__world">
+                <div class="section-4__card">
+                    <div class="section-4__card--side section-4__card--front">
+                        <h3 class="card__title">
+                            카라반
+                        </h3>
+                    </div>
+                    <div class="section-4__card--side section-4__card--back">
+                        <p class="card__text">
+                            타입 : 원룸형
+                        </p>
+                        <p class="card__text">
+                            성수기 : 150,000원
+                        </p>
+                        <p class="card__text">
+                            비성수기 : 90,000원
+                        </p>
+                        <p class="card__text">
+                            기준 / 최대 : 2 / 2
+                        </p>
+                    </div>
+
+                </div>
+                <div class="section-4__card">
+                    <div class="section-4__card--side section-4__card--front">
+                        <h3 class="card__title">
+                            사랑체
+                        </h3>
+                    </div>
+                    <div class="section-4__card--side section-4__card--back">
+                        <p class="card__text">
+                            타입 : 복층형
+                        </p>
+                        <p class="card__text">
+                            성수기 : 190,000원
+                        </p>
+                        <p class="card__text">
+                            비성수기 : 140,000원
+                        </p>
+                        <p class="card__text">
+                            기준 / 최대 : 2 / 4
+                        </p>
+                    </div>
+
+                </div>
+                <div class="section-4__card">
+                    <div class="section-4__card--side section-4__card--front">
+                        <h3 class="card__title">
+                            행복채
+                        </h3>
+                    </div>
+                    <div class="section-4__card--side section-4__card--back">
+                        <p class="card__text">
+                            타입 : 원룸형
+                        </p>
+                        <p class="card__text">
+                            성수기 : 220,000원
+                        </p>
+                        <p class="card__text">
+                            비성수기 : 160,000원
+                        </p>
+                        <p class="card__text">
+                            기준 / 최대 : 2 / 6
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </section>
+    <!-- End of Section-4 -->
+
+    <!-- Section-5 -->
+    <section class="section-5">
+        <div class="section-5__wrap">
+            <h2 class="section-5__title">
+                facilities
+            </h2>
+            <p class="section-5__subtitle">
+                행복펜션 부대시설
+            </p>
+            <a href="#" class="section-5__button">
+                view all facilities
+            </a>
+            <figure class="section-5__figure">
+                <a href="#">
+                    <img src="./src/images/img_fallwater_tablet.jpg" alt="폭포">
+                </a>
+                <a href="#">
+                    <img src="./src/images/img_water_tablet.jpg" alt="대형수영장">
+                </a>
+
+                <a href="#">
+                    <img src="./src/images/img_garden_tablet.jpg" alt="정원">
+                </a>
+
+            </figure>
+        </div>
+
+    </section>
+    <!-- End of Section-5 -->
+
+    <!-- Section-6 -->
+    <section class="section-6">
+        <div class="section-6__wrap">
+            <h2 class="section-6__title">
+                Near travel
+            </h2>
+            <p class="section-6__subtitle">
+                근처 여행시설
+            </p>
+            <a href="#" class="section-6__button">
+                view all
+            </a>
+
+            <figure class="section-6__gallery">
+                <a href="#">
+                    <img src="./src/images/near_travel_01.jpg" alt="물놀이">
+                </a>
+                <a href="#">
+                    <img src="./src/images/near_travel_02.jpg" alt="산책">
+                </a>
+
+                <a href="#">
+                    <img src="./src/images/near_travel_03.jpg" alt="탐사">
+                </a>
+
+            </figure>
+        </div>
+    </section>
+    <!-- End of Section-6 -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__wrap">
+            <nav class="footer__fnb">
+                <ul class="fnb__container">
+                    <li class="fnb__item">
+                        <a href="#">펜션소개</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">객실소개</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">펜션스페셜</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">펜션서비스</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">주변여행지</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">예약안내</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">커뮤니티</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer__left">
+                <p class="footer__text">
+                    상호 : 행복펜션<br>
+                    예약전화 : <a href="tel:031-585-8232">031-585-8232</a>
+                </p>
+                <address class="footer__address">
+                    주소 : 경기포 가평군 상면 수목원로 128<br>
+                    (구주소 : 경기도 가평군 상면 행현리 332-2번지)
+                </address>
+                <small class="footer__copyright">
+                    COPYRIGHT(c) ALL RIGHTS RESERVED. (주) 팬션뱅크
+                </small>
+            </div>
+            <div class="footer__right">
+                <p class="footer__text">
+                    사업자 번호 : 879-44-00531<br>
+                    계좌번호 : 농협 351-1085-1544-03 조미선
+                </p>
+                <p class="footer__text">
+                    이 사이트는 포트폴리오 용도로 제작되었습니다.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of footer -->
+</body>
+
+</html>

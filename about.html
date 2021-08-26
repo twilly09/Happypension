@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="64x64" href="./src/images/icon.svg">
+    <!-- <link rel="stylesheet" type="text/css" href="./src/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="./src/styles/index.css"> -->
+
+    <!-- 초기화 -->
+    <link rel="stylesheet" type="text/css" href="./src/css/reset.css">
+
+    <!-- header, footer 적용 -->
+    <link rel="stylesheet" type="text/css" href="./src/css/common.css">
+
+    <!-- about 적용 -->
+    <link rel="stylesheet" type="text/css" href="./src/css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- 검색엔진 키워드 -->
+    <meta name="keyword" content="펜션">
+    <!-- 웹 페이지에 대한 설명 -->
+    <meta name="description" content="포트폴리오 용도">
+    <!-- 문서의 저자 -->
+    <meta name="author" content="이젠">
+
+    <title>about</title>
+    <script src="./src/plugin/jquery-3.6.0.min.js" defer></script>
+    <script src="./src/plugin/anime.min.js" defer></script>
+
+
+    <script src="./src/scripts/main.js" defer></script>
+</head>
+<body>
+     <!-- #region Header  -->
+     <header class="header" slot="header">
+
+        <!-- wrap -->
+        <div class="header__wrap">
+            <!-- flex 박스 컨테이너 -->
+            <div class="header__flexbox">
+                <figure class="header__logo">
+                    <a href="./index.html">
+                        <img src="./src/images/LOGO.png" alt="LOGO">
+                    </a>
+
+                </figure>
+
+                <!-- 메뉴 -->
+                <nav class="header__gnb">
+                    <ul class="gnb">
+                        <li class="gnb__item">
+                            <a href="about.html">
+                                펜션소개
+                            </a>
+                        </li>
+                        <li class="gnb__item">
+                            <a href="#">
+                                객실소개
+                            </a>
+                        </li>
+                        <li class="gnb__item">
+                            <a href="#">
+                                펜션스페셜
+                            </a>
+                        </li>
+                        <li class="gnb__item">
+                            <a href="#">
+                                펜션서비스
+                            </a>
+                        </li>
+                        <li class="gnb__item">
+                            <a href="./travel.html">
+                                주변여행지
+                            </a>
+                        </li>
+                        <li class="gnb__item">
+                            <a href="#">
+                                예약안내
+                            </a>
+                        </li>
+                        <li class="gnb__item">
+                            <a href="./community.html">
+                                커뮤니티
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- ICON -->
+                <ul class="header__icon">
+                    <li class="icon__item">
+                        <a href="#">
+                            <span class="icon-bank"></span>
+                        </a>
+                    </li>
+                    <li class="icon__item">
+                        <a href="about.html#main">
+                            <span class="icon-location2"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- #endregion -->
+
+    <!-- visual -->
+    <section id="top_img" class="pc">
+        <img src="./src/images/about1.png" alt="about visual">
+        <div>
+            <h3>About</h3>
+            <h5>행복펜션에 오신것을 환영합니다</h5>
+        </div>
+    </section>
+
+    <!-- contents -->
+    <section>
+        <h4>아름다운 풍경 행복펜션으로 초대합니다</h4>
+        <article id="greeting">
+            <img src="./src/images/about2.png" alt="about-1">
+            <p>
+                <br>
+                안녕하세요 행복펜션입니다. <br>
+                수많은 펜션 중에 어디서 숙박 할지 결정하시기 힘드시죠? <br>
+                <br>
+                저희 행복펜션은 아침고요수목원 입구에 위치해 있으며 <br>
+                객실마다 개별테라스가 있어서 와인과 차 한잔의 여유를 맛보실 수 있습니다. <br>
+                <br>
+                무더운 여름에는 야외수영장과 근처 계곡에서 커플, 가족, 지인들과<br>
+                즐거운 물놀이를 즐시길 수 있습니다.<br>
+                <br>
+                계절에 따라 행복 정원에 심어놓은 꽃사과,앵두,매실 등 과실 열매를 맛보실 수 있으며<br>
+                저녁에서 넓고 예쁜 정원에서 산책을 즐기실 수 있습니다.<br>
+                <br>
+                인생의 피로와 스트레스에 지쳐있는 여러분에게 잠시나마 무거운 짐을 <br>
+                내려 놓을 수 있는 인생의 동반자가 되어줄 것입니다. 
+            </p>
+        </article>
+    </section>
+    <!-- MAP & LOCATION -->
+    <section id="main">
+        <div class="container">
+            <article>
+            <h4>MAP&LOCATION</h4> 
+            <div class="location">
+              <ul>
+                <li>
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <b>대표전화 : </b>010-2062-0418
+                </li>
+                <li>
+                  <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  <b>연락가능 : </b>08:00~23:00
+                </li>
+                <li>
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                  <b>주소안내 : </b> 경기도 가평군 상면 수목원로 128
+                </li>
+                <li>
+                  <i class="fa fa-car" aria-hidden="true" style="font-size: 13px;"></i>
+                  <b>주차안내: </b>주차가능
+                </li>
+              </ul>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.988349004778!2d127.3612702152757!3d37.766871379760886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35632dc04872453b%3A0xf1d4ddfa425c5798!2z7ZaJ67O17Y6c7IWY!5e0!3m2!1sko!2skr!4v1628792681514!5m2!1sko!2skr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </article>
+        </div>
+      </section>
+
+          <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__wrap">
+            <nav class="footer__fnb">
+                <ul class="fnb__container">
+                    <li class="fnb__item">
+                        <a href="#">펜션소개</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">객실소개</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">펜션스페셜</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">펜션서비스</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">주변여행지</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">예약안내</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">커뮤니티</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer__left">
+                <p class="footer__text">
+                    상호 : 행복펜션<br>
+                    예약전화 : <a href="tel:031-585-8232">031-585-8232</a>
+                </p>
+                <address class="footer__address">
+                    주소 : 경기포 가평군 상면 수목원로 128<br>
+                    (구주소 : 경기도 가평군 상면 행현리 332-2번지)
+                </address>
+                <small class="footer__copyright">
+                    COPYRIGHT(c) ALL RIGHTS RESERVED. (주) 팬션뱅크
+                </small>
+            </div>
+            <div class="footer__right">
+                <p class="footer__text">
+                    사업자 번호 : 879-44-00531<br>
+                    계좌번호 : 농협 351-1085-1544-03 조미선
+                </p>
+                <p class="footer__text">
+                    이 사이트는 포트폴리오 용도로 제작되었습니다.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of footer -->
+
+</body>
+</html>

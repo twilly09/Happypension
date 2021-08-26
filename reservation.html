@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="64x64" href="./src/images/icon.svg">
+    <!-- <link rel="stylesheet" type="text/css" href="./src/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="./src/styles/index.css"> -->
+
+    <!-- 초기화 -->
+    <link rel="stylesheet" type="text/css" href="./src/css/reset.css">
+
+    <!-- header, footer 적용 -->
+    <link rel="stylesheet" type="text/css" href="./src/css/common.css">
+
+    <!-- reservation -->
+    <link rel="stylesheet" type="text/css" href="./src/css/reservation.css">
+
+    <!-- 검색엔진 키워드 -->
+    <meta name="keyword" content="펜션">
+    <!-- 웹 페이지에 대한 설명 -->
+    <meta name="description" content="포트폴리오 용도">
+    <!-- 문서의 저자 -->
+    <meta name="author" content="이젠">
+
+    <title>Reservation</title>
+    <script src="./src/plugin/jquery-3.6.0.min.js" defer></script>
+    <script src="./src/plugin/anime.min.js" defer></script>
+
+
+    <script src="./src/scripts/main.js" defer></script>
+    <script src="./src/scripts/reservation.js"></script>
+</head>
+<body>
+    <!-- #region Header  -->
+    <header class="header" slot="header">
+
+        <!-- wrap -->
+        <div class="header__wrap">
+            <!-- flex 박스 컨테이너 -->
+            <div class="header__flexbox">
+                <figure class="header__logo">
+                    <a href="./index.html">
+                        <img src="./src/images/LOGO.png" alt="LOGO">
+                    </a>
+
+                </figure>
+
+                <!-- 메뉴 -->
+                <nav class="header__gnb">
+                    <ul class="gnb">
+                        <li class="gnb__item">
+                            <a href="about.html">
+                                펜션소개
+                            </a>
+                        </li>
+                        <li class="gnb__item">
+                            <a href="#">
+                                객실소개
+                            </a>
+                        </li>
+                        <li class="gnb__item">
+                            <a href="#">
+                                펜션스페셜
+                            </a>
+                        </li>
+                        <li class="gnb__item">
+                            <a href="#">
+                                펜션서비스
+                            </a>
+                        </li>
+                        <li class="gnb__item">
+                            <a href="./travel.html">
+                                주변여행지
+                            </a>
+                        </li>
+                        <li class="gnb__item">
+                            <a href="#">
+                                예약안내
+                            </a>
+                        </li>
+                        <li class="gnb__item">
+                            <a href="./community.html">
+                                커뮤니티
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- ICON -->
+                <ul class="header__icon">
+                    <li class="icon__item">
+                        <a href="#">
+                            <span class="icon-bank"></span>
+                        </a>
+                    </li>
+                    <li class="icon__item">
+                        <a href="about.html#main">
+                            <span class="icon-location2"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- #endregion -->
+
+    <!-- visual -->
+    <section id="top_img" class="pc">
+        <img src="./src/images/about1.png" alt="about visual">
+        <div>
+            <h3>Reservation</h3>
+        </div>
+    </section>
+
+    <table class="scriptCalendar">
+        <thead>
+            <tr>
+                <td onClick="prevCalendar();" style="cursor:pointer;">&#60;&#60;</td>
+                <td colspan="5">
+                    <span id="calYear">YYYY</span>년
+                    <span id="calMonth">MM</span>월
+                </td>
+                <td onClick="nextCalendar();" style="cursor:pointer;">&#62;&#62;</td>
+            </tr>
+            <tr>
+                <td>일</td><td>월</td><td>화</td><td>수</td><td>목</td><td>금</td><td>토</td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>   
+    
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer__wrap">
+            <nav class="footer__fnb">
+                <ul class="fnb__container">
+                    <li class="fnb__item">
+                        <a href="#">펜션소개</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">객실소개</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">펜션스페셜</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">펜션서비스</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">주변여행지</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">예약안내</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">커뮤니티</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer__left">
+                <p class="footer__text">
+                    상호 : 행복펜션<br>
+                    예약전화 : <a href="tel:031-585-8232">031-585-8232</a>
+                </p>
+                <address class="footer__address">
+                    주소 : 경기포 가평군 상면 수목원로 128<br>
+                    (구주소 : 경기도 가평군 상면 행현리 332-2번지)
+                </address>
+                <small class="footer__copyright">
+                    COPYRIGHT(c) ALL RIGHTS RESERVED. (주) 팬션뱅크
+                </small>
+            </div>
+            <div class="footer__right">
+                <p class="footer__text">
+                    사업자 번호 : 879-44-00531<br>
+                    계좌번호 : 농협 351-1085-1544-03 조미선
+                </p>
+                <p class="footer__text">
+                    이 사이트는 포트폴리오 용도로 제작되었습니다.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of footer -->
+</body>
+</html>

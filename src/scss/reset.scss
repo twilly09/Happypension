@@ -1,0 +1,121 @@
+
+
+
+/* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?qeadnn');
+    src:  url('../fonts/icomoon.eot?qeadnn#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?qeadnn') format('truetype'),
+    url('../fonts/icomoon.woff?qeadnn') format('woff'),
+    url('../fonts/icomoon.svg?qeadnn#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak-as: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Enable Ligatures ================ */
+    letter-spacing: 0;
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga";
+    -webkit-font-variant-ligatures: discretionary-ligatures;
+    font-variant-ligatures: discretionary-ligatures;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bank:before {
+    content: "\e900";
+}
+.icon-location2:before {
+    content: "\e948";
+}
+.icon-github:before {
+    content: "\eab0"; 
+}
+
+
+// 초기화
+*,
+*::before,
+*::after
+{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-size: 62.5%;
+}
+
+body
+{
+    font-family: 'Noto Sans KR', sans-serif;
+
+    /* 16px 기준 */
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    min-height: 100vh;
+
+    overflow-x : hidden;
+
+    color : hsl(0,0%,26.7%);
+    scroll-behavior: smooth;
+}
+img
+{
+    vertical-align: middle;
+}
+
+
+ol,li
+{
+    list-style: none;
+}
+
+blockquote, q
+{
+    quotes: none;
+}
+
+a
+{
+    font-size: inherit;
+    text-decoration: none;
+}
+
+:is(article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section)
+{
+    display: block;
+}
+
+:is(audio, canvas, progress, video)
+{
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+/* 버튼 자체 초기화 */
+button
+{
+    all : unset;
+}

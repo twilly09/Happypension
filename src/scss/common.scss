@@ -1,0 +1,230 @@
+/*
+    common.css 파일은 header, footer 부분을 설정한 파일이다.
+*/
+
+// 미디어쿼리 설정
+@use './media' as view;
+
+// 커스텀 설정
+@use './mixin' as fun;
+
+// 헤더 배경화면
+$header-backgroundcolor : hsl(0, 0%, 0%);
+
+// 해더 호버 배경화면
+$header-backgroundcolor-hover : hsla(0, 0%, 0%, .4);
+
+
+// Header Style Start
+.header
+{
+    // 크기 설정
+    width : 100%;
+    height : 100px;
+
+    background-color: $header-backgroundcolor;
+
+    position : fixed;
+    top : 0;
+    left : 0;
+
+
+    box-shadow: .1rem .1rem .2rem #444;
+    z-index: 1000;
+
+    overflow: hidden;
+
+    transition: background-color .7s ease-in;
+
+    // ! Hover
+    &:hover
+    {
+        background-color: $header-backgroundcolor-hover;
+    }
+    
+    // Container
+    &__wrap
+    {
+        @include fun.wrapSetting;
+    }
+
+    // Flexbox
+    &__flexbox
+    {
+        width: inherit;
+        height: inherit;
+
+        @include fun.FlexboxSetting(row, space-between, center);
+    }
+
+    // LOGO
+    &__logo
+    {
+        width : 10%;
+        
+        @include fun.Debug();
+
+        // Image
+        &  img
+        {
+            width: 100%;
+            vertical-align: middle;
+        }
+    }
+
+    // GNB 메뉴
+    &__gnb
+    {
+        @include fun.Debug(red);
+
+        width : 60%;
+    }
+
+    // Icon 메뉴
+    &__icon
+    {
+        @include fun.Debug(yellow);
+
+        @include fun.FlexboxSetting(row, space-between, center, 1em);
+    }
+}
+
+.gnb
+{
+    width : 100%;
+
+    @include fun.FlexboxSetting(row, space-evenly, center, 1em);
+
+    &__item
+    {
+        color : white;
+
+        transition: color .3s ease-in;
+        &:hover
+        {
+            color: hsl(189, 77.3%, 50.0%);
+        }
+        & > a
+        {
+            padding : 1em 0;
+            letter-spacing: 2px;   
+            color : inherit;
+        }
+    }
+}
+.icon__item
+{
+    & > a
+    {
+        padding : 1em 0;
+        font-size: 1.2em;
+        color : white;
+        transition: color .3s ease-in;
+        &:hover
+        {
+            color : hsl(189, 77.3%, 50.0%);
+        }
+    }
+}
+
+// Header Style End
+
+// Footer Style Start
+
+.footer
+{
+    height: 400px;
+
+    background-color : hsl(0,0%,0%);
+
+    box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
+    padding : 3em;
+    &__wrap
+    {
+        @include fun.wrapSetting;
+    }
+
+    &__fnb
+    {
+        @include fun.Debug(rgb(153, 158, 224));
+
+        width : 100%;
+        border-bottom: 2px solid #fff;
+    }
+
+    overflow: hidden;
+
+
+    &__left
+    {
+        float : left;
+
+        color : white;
+    }
+
+    &__right
+    {
+        float : right;
+        color : white;
+    }
+
+    &__text
+    {
+        font-size: .8em;
+        padding : 1em 0;
+        line-height: 2;
+        & > a
+        {
+            color : #fff;
+        }
+
+    }
+    &__address
+    {
+        padding : 1em 0;
+        line-height: 2;
+    }
+    &__copyright
+    {
+        padding-top : 10em;
+
+        color : #444;
+    }
+}
+
+.fnb
+{
+    &__container
+    {
+        @include fun.FlexboxSetting(row, space-between, center);
+        gap : 1em;
+        width: 60%;
+        height: inherit;
+        
+        
+    }
+    &__item
+    {
+        &:nth-child(1)
+        {
+            padding-left: 0;
+        }
+        color : white;
+        padding : 1em;
+        & > a
+        {
+            color : inherit;
+            letter-spacing: 2px;
+            text-decoration: none;
+            font-size: inherit;
+
+            transition: color .3s ease-in;
+            &:hover
+            {
+                color: hsl(189, 77.3%, 50.0%);
+            }
+        }
+    }
+}
+
+// Footer Style End

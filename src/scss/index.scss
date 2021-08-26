@@ -1,0 +1,512 @@
+// 미디어쿼리 설정
+@use './media' as view;
+
+// 커스텀 설정
+@use './mixin' as fun;
+
+
+// 변수 설정
+$font-size-mainTitle : 4.2em;
+$font-size-subTitle : 2.5em;
+$font-size-bigtext : 1.8em;
+$font-size-middletext : 1.5em;
+$font-size-default : 1em;
+$font-size-smalltext : .8em;
+
+$color-white : hsl(0, 0%, 100%);
+$color-cyan : hsl(189, 77.3%, 50.0%);
+$color-graydark : #444;
+
+$font-name-title : 'Black Han Sans';
+$font-name-default : 'Noto Sans KR';
+
+
+// 6개의 색션에 값 주기
+@for $i from 1 through 6
+{
+    .section-#{$i}
+    {
+        position : relative;
+
+        width: 100%;
+        height: calc(100vh - 100px);
+
+        text-align: center;
+    }
+}
+
+@for $j from 2 through 6
+{
+    .section-#{$j}
+    {
+        &__wrap
+        {
+            @include fun.Debug(pink);
+            @include fun.wrapSetting;
+        }
+    }
+}
+
+
+
+// #region Section-1 Style
+.section-1
+{
+    height: 100vh;
+
+    background-color: hsla(0,100%,0%);
+    background-image: url('../images/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include fun.FlexboxSetting();
+
+    &::before
+    {
+        @include fun.virtualSetting(1);
+        transition: background-color 1s ease;
+    }
+
+    &.active::before
+    {
+        background-color: hsla(0,100%,0%,.7);
+    }
+
+    // Main Title
+    &__mainTitle
+    {
+        font-size: $font-size-mainTitle;
+        color : $color-white;
+
+        position: relative;
+
+        font-family: 'Black Han Sans', sans-serif;
+
+        text-shadow: .1em .1em 4em #fff,
+            .1rem .1rem .2rem #666
+        ;
+        letter-spacing: .5rem;
+
+        @include fun.Debug(blue);
+    }
+
+    // Scroll
+    &__scroll
+    {
+        position : absolute;
+
+        bottom : 2em;
+        left : 50%;
+        text-align: center;
+
+        transform: translateX(-50%);
+
+        
+
+        &Text
+        {
+            font-size: 1em;
+    
+            text-transform: uppercase;
+            color : $color-white;
+            font-size: $font-size-smalltext;
+            letter-spacing: .1rem;
+        }
+        @include fun.Debug(green);
+    }
+
+}
+
+// ? V 이동
+@keyframes scrollMove
+{
+    0%
+    {
+        bottom: 2em;
+    }
+    100%
+    {
+        bottom: 6em;
+    }
+}
+
+
+// #endregion End of Section-1
+
+// #region Section-2
+.section-2
+{
+    
+    
+
+    overflow: hidden;
+    &__title
+    {
+        font-size: 2.5em;
+        text-transform: uppercase;
+        color : hsl(189, 77.3%, 50.0%);
+        text-shadow: .1rem .1rem .1rem hsla(0,100%,0%,.7);
+
+        margin-top : 1em;
+        margin-bottom: 1em;
+
+        @include fun.Debug(red);
+        background-color: $color-white;
+
+        opacity: 0;
+
+    }
+
+    // 정렬 컨테이너
+    &__flexbox
+    {
+        height: calc(100% - 7em);
+        @include fun.Debug(tomato);
+        
+        @include fun.FlexboxSetting(row, center,center,2em);
+
+        padding-top : 10rem;
+        background-color: #444;
+
+        &::before
+        {
+            content: '';
+            width: 100vw;
+            height: 100%;
+
+            background-color: #444;
+            position: absolute;
+            z-index: -1;
+        }
+
+    }
+
+    // 가상 박스
+    &__template
+    {
+        width: 50%;
+        height: 100%;
+        text-align: left;
+        & > video
+        {
+            width: 100%;
+            vertical-align: middle;
+            object-fit: cover;
+        }
+        color : $color-white;
+        opacity: 0.4;
+        transition: opacity .7s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    &__text
+    {
+        font-size: $font-size-default;
+
+        margin-top: 2em;
+        padding-right: 2em;
+        margin-bottom: 0;
+        letter-spacing: .2rem;
+        line-height: 1.5;
+        text-shadow: 1px 1px 1px #222;
+    }
+
+    &__subtitle
+    {
+        font-size: $font-size-bigtext;
+
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+    }
+
+    &__button
+    {
+        display: inline-block;
+        margin : 2em 0;
+        padding : .5em 2em;
+
+        border : 2px solid #C8E21D;
+        border-radius: 25px;
+
+        color : #fff;
+
+        transition: all .4s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+        &:hover
+        {
+            color : #C8E21D;
+            border : 2px solid #fff;
+        }
+    }
+
+    &.active
+    {
+        .section-2
+        {
+            &__title
+            {
+                opacity: 1;
+
+                transition: opacity .7s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+
+            &__template
+            {
+                opacity: 1;
+                transition: opacity .7s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+        }
+    }
+}
+
+// #endregion
+
+
+// #region Section-3
+.section-3
+{
+    /* 100vh - header */
+    background-image: url('../images/section-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+// #endregion
+
+// #region Section-4
+.section-4
+{
+
+    &__template
+    {
+        height: 25%;
+
+        @include fun.Debug(rgb(236, 100, 9));
+    }
+    &__world
+    {
+        height: 75%;
+
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+
+        text-align: left;
+
+        background-color: #fff;
+        border-radius: 10px;
+    }
+    @include fun.styleSetting-font("section-4");
+    
+
+    overflow: hidden;
+
+
+    &__card
+    {
+        width : 300px;
+        height: 200px;
+
+        margin : 1em;
+        padding : 1em;
+
+        position: relative;
+
+        border-radius: 10px;
+
+        box-shadow: .1rem .2rem 1rem .1rem #f44336,
+        .2rem .3rem 1rem .1rem #ff9800,
+        .3rem .4rem 1rem .1rem #ffeb3b,
+        .4rem .5rem 1rem .1rem #4caf50,
+        ;
+
+        transform: perspective(500px) rotateY(0deg);
+        transform-style: preserve-3d;
+        transition: all 1s ease;
+        cursor: pointer;
+        
+        &--side
+        {
+            position: absolute;
+            left : 0;
+            top : 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 1rem;
+            // 뒷면 안보이게
+            backface-visibility: hidden;
+        }
+
+        &--front
+        {
+            background-repeat: no-repeat;
+            background-size: cover;
+            // position : relative;
+            z-index: 2;
+            -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+            border-radius: 1rem;
+            @include fun.FlexboxSetting;
+
+            &::before
+            {
+                @include fun.virtualSetting;
+                border-radius: 1rem;
+            }
+        }
+        &--back
+        {
+            background-color: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 1rem;
+            -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+
+            @include fun.FlexboxSetting(column);
+
+            &::before
+            {
+                @include fun.virtualSetting(0.5);
+                border-radius: 1rem;
+            }
+        }
+        &:nth-child(1){transform:perspective(500px) rotateY(25deg);}
+        &:nth-child(2){transform:perspective(1000px) translateZ(-200px);}
+        &:nth-child(3){transform:perspective(500px) rotateY(-25deg);}
+
+        @for $idx from 1 through 3
+        {
+            &:nth-child(#{$idx}) &--front
+            {
+                background-image: url('../images/card_image' + #{$idx} + '_front.jpg');
+            }
+            &:nth-child(#{$idx}) &--back
+            {
+                background-image: url('../images/card_image' + #{$idx} + '_back.jpg');
+            }
+        }
+
+        &:hover
+        {
+            transform: perspective(500px) rotateY(0deg);
+        }
+        // overflow: hidden;
+
+        &.reverse
+        {
+            transform: perspective(500px) rotateY(-180deg);
+        }
+    }
+}
+
+// 카드정보
+.card
+{
+    &__title
+    {
+        font-size: $font-size-bigtext;
+        font-family: $font-name-default, sans-serif; 
+        font-weight: 900;
+        color : $color-white;
+
+        text-shadow: 1px 1px 3px #444;
+        letter-spacing: 5px;
+
+        position: relative;
+    }
+    &__text
+    {
+        font-size: $font-size-default;
+        padding : .5em;
+        color : $color-white;
+        position: relative;
+
+        text-shadow: 1px 1px 1px #444;
+    }
+}
+// #endregion
+
+// #region Section-5
+.section-5
+{
+    @include fun.styleSetting-font("section-5");
+    
+    &__figure
+    {
+        @supports (display: grid)
+        {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 200px 200px;
+            grid-template-areas: 
+            "img00 img01"
+            "img00 img02"
+            ;
+
+            gap : 1em;
+        }
+        
+        & > a
+        {
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            transform: scale(1);
+            transition: transform .5s ease;
+            & > img
+            {
+                width: inherit;
+                height: inherit;
+                object-fit: cover;
+            }
+            
+            &:nth-child(1)
+            {
+
+                grid-area: img00;
+            }
+            &:hover
+            {
+                transform: scale(1.1);
+                z-index: 5;
+            }
+
+        }
+    }
+
+    overflow: hidden;
+
+}
+// #endregion
+
+// #region Section-6
+.section-6
+{
+    @include fun.styleSetting-font("section-6");
+
+    overflow: hidden;
+    &__gallery
+    {
+        width: inherit;
+        height: 400px;
+        @include fun.FlexboxSetting(row, space-between, center);
+        gap : 1em;
+
+        & > a
+        {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            & > img 
+            {
+                width: inherit;
+                height: inherit;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+// #endregion Section-6
